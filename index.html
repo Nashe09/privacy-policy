@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Nash Music</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .policy-section {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 leading-relaxed">
+
+    <div class="max-w-4xl mx-auto px-6 py-12 md:py-20">
+        <!-- Header -->
+        <header class="mb-12 border-b border-slate-200 pb-8">
+            <h1 class="text-4xl font-extrabold text-slate-900 mb-4">Privacy Policy</h1>
+            <p class="text-lg text-slate-600">Last Updated: April 2026</p>
+            <p class="mt-4 text-slate-700 font-medium">Welcome to Nash Music. Your privacy is a priority for us. This policy outlines how we handle data within the Nash Music mobile application.</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="bg-white shadow-sm rounded-2xl p-8 md:p-12">
+            
+            <section class="policy-section">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Data Collection & Permissions</h2>
+                <p class="mb-4">Nash Music requires certain permissions to function as a local media player. We only request access to data that is essential for the app's features.</p>
+                <ul class="list-disc pl-6 space-y-2 text-slate-700">
+                    <li><strong>Media Files:</strong> The app requests <code class="bg-slate-100 px-1 rounded text-sm">READ_MEDIA_AUDIO</code> (or <code class="bg-slate-100 px-1 rounded text-sm">READ_EXTERNAL_STORAGE</code> on older Android versions). This access is used exclusively to scan, index, and play the audio files stored on your device.</li>
+                    <li><strong>Usage Stats:</strong> To provide features like "Musical Activity" and "Recently Played," the app tracks play counts and history. This data is stored locally on your device in <code class="bg-slate-100 px-1 rounded text-sm">SharedPreferences</code> and a <code class="bg-slate-100 px-1 rounded text-sm">play_history.csv</code> file.</li>
+                    <li><strong>Sensor Data:</strong> The app utilizes your device's accelerometer for the "Shake to Skip" feature. This sensor data is processed in real-time to detect motion and is never stored, logged, or shared.</li>
+                </ul>
+            </section>
+
+            <section class="policy-section">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Third-Party Services</h2>
+                <p class="mb-4">While Nash Music is primarily a local player, it utilizes some standard libraries:</p>
+                <ul class="list-disc pl-6 space-y-2 text-slate-700">
+                    <li><strong>HMS & GMS:</strong> The app includes Huawei Mobile Services (HMS) and Google Play Services (GMS) base libraries to ensure compatibility across different Android devices. Currently, these are used for basic availability checks. If analytics or cloud features are integrated in the future, this policy will be updated to reflect their respective data policies.</li>
+                    <li><strong>Coil (Image Loading):</strong> We use the Coil library to display album art. While primarily used for local files, if the app fetches album art from external URLs, standard network requests are made to the hosting server (e.g., fetching a manifest or metadata).</li>
+                </ul>
+            </section>
+
+            <section class="policy-section">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">3. Data Storage & Sharing</h2>
+                <p class="mb-4">We believe in a "Local First" approach to your music data.</p>
+                <ul class="list-disc pl-6 space-y-2 text-slate-700">
+                    <li><strong>Local Storage:</strong> All playlists, favorites, song metadata edits, and listening statistics are stored <strong>exclusively on your device</strong>. No personal music data is uploaded to our servers.</li>
+                    <li><strong>Sharing Features:</strong> When you use the "Share Lyrics Card" feature, a temporary image file is generated and shared via Android's <code class="bg-slate-100 px-1 rounded text-sm">FileProvider</code>. This file is only stored temporarily to facilitate the transfer to the app you choose (e.g., WhatsApp, Instagram).</li>
+                </ul>
+            </section>
+
+            <section class="policy-section">
+                <h2 class="text-22xl font-bold text-slate-900 mb-4">4. User Controls</h2>
+                <p class="mb-4">You have full control over your data and how the app interacts with your device:</p>
+                <ul class="list-disc pl-6 space-y-2 text-slate-700">
+                    <li><strong>Folder Exclusion:</strong> You can manage which folders are scanned by the app to keep specific audio files private or hidden from the library.</li>
+                    <li><strong>Permissions:</strong> You can revoke storage, media, or notification permissions at any time through your Android System Settings. Note that revoking storage permissions will prevent the app from playing your music.</li>
+                    <li><strong>Data Erasure:</strong> Clearing the app's cache or data in Android settings will permanently delete your local playlists, play history, and preferences.</li>
+                </ul>
+            </section>
+
+            <section class="policy-section">
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">5. Contact Us</h2>
+                <p class="text-slate-700">If you have any questions about this Privacy Policy or the practices of Nash Music, please contact us through the official project repository or developer contact information provided on the app listing.</p>
+            </section>
+
+        </main>
+
+        <footer class="mt-12 text-center text-slate-500 text-sm">
+            <p>&copy; 2026 Nash Music Project. Built for privacy and performance.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
